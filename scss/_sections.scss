@@ -1,0 +1,225 @@
+.chat {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   max-width: 1200px;
+   margin: 0 auto;
+   color: #484848;
+   .chat-phones {
+      @include mobile {
+        display: none;
+      }
+   }
+   span,
+   h1 {
+      display: inline-block;
+   }
+   .everyday-chat {
+      padding-left: 100px;
+      @include tablet {
+        padding-left: 0;
+      }
+      @include mobile {
+        width: 95%;
+        margin: 60px auto;
+        padding-left: 0;
+        text-align: center;
+      }
+   }
+   h1 {
+     margin-left: 25px;
+     font-size: 2.5rem;
+     font-weight: 400;
+     @include tablet {
+       margin-left: 0;
+     }
+   }
+   p {
+     margin-top: 40px;
+     font-size: $font-size-3;
+     line-height: 30px;
+     font-weight: 300;
+     @include mobile {
+        font-size: $font-size-4;
+     }
+   }
+}
+
+.share {
+   background-color: #2ba7de;
+   color: #fff;
+   font-weight: 300;
+   text-align: center;
+   padding-top: 35px;
+   h1 {
+     font-size: $font-size-1;
+     font-weight: 300;
+     padding-top: 20px;
+   }
+   p {
+     font-size: $font-size-4;
+     padding-top: 20px;
+   }
+   .videocall {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 20px 0;
+     img {
+       width: 100%;
+     }
+   }
+}
+
+.mobile-landlines {
+   background-color: #f2f6f7;
+   color: #484848;
+   padding-top: 140px;
+   font-weight: 300;
+   @include tablet {
+     padding: 45px 0;
+   }
+   @include mobile {
+     padding: 45px 0;
+   }
+   .mobile-landlines-container {
+     display: flex;
+     max-width: 1200px;
+     margin: 0 auto;
+     @include tablet {
+       width: 90%;
+       text-align: center;
+     }
+     @include mobile {
+       text-align: center;
+     }
+   }
+   .icon-container,
+   h1 {
+     display: inline-block;
+   }
+   h1 {
+     font-size: $font-size-1;
+     font-weight: 300;
+   }
+   p {
+     padding: 75px 120px 0 0;
+     line-height: 30px;
+     @include tablet {
+       padding: 75px 0 0 0;
+     }
+     @include mobile {
+       padding: 75px 25px 0 25px;
+     }
+   }
+   .callrates {
+     padding-top: 75px;
+     a {
+       padding: 18px 42px;
+       color: #fff;
+       background-color: #2ba7de;
+       border: 2px solid #2ba7de;
+       border-radius: 30px;
+       &:hover {
+         color: #2ba7de;
+         background-color: #fff;
+       }
+     }
+   }
+   .col2 {
+     @include tablet {
+       display: none;
+     }
+     @include mobile {
+       display: none;
+     }
+   }
+}
+.features {
+    text-align: center;
+    color: #484848;
+    margin: 115px 0;
+    .features-header {
+      h1,
+      p {
+        font-weight: 300;
+      }
+      h1 {
+        font-size: $font-size-2;
+      }
+      p {
+        font-size: $font-size-4;
+        margin-top: 15px;
+      }
+    }
+    .features-main {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      max-width: 1250px;
+      margin: 15px auto 0 auto;
+    }
+    article {
+      width: 33.3%;
+      font-size: $font-size-4;
+      margin-top: 100px;
+      @include mobile {
+        width: 100%;
+      }
+      img {
+        height: 100%;
+      }
+      h2 {
+        font-weight: 300;
+        color: #00b0f0;
+        margin-top: 35px;
+      }
+      p {
+        font-weight: 300;
+        margin-top: 35px;
+        padding: 0 25px;
+      }
+    }
+    .more-features {
+      margin-top: 123px;
+        a {
+          padding: 23px 45px;
+          color: #fff;
+          background-color: #00b0f0;
+          border: 2px solid #00b0f0;
+          border-radius: 40px;
+          &:hover {
+            background-color: #fff;
+            color: #00b0f0;
+          }
+        }
+    }
+}
+.download {
+    text-align: center;
+    padding: 75px 0;
+    color: #fff;
+    background-image: url(../img/downloadBG.jpg);
+    @include background-image;
+    h2 {
+      font-weight: 300;
+      font-size: $font-size-3;
+      @include mobile {
+          font-size: $font-size-4;
+          padding: 0 25px;
+      }
+    }
+    .download-btn {
+      margin-top: 45px;
+      a {
+        padding: 25px 45px;
+        background-color: #7fba00;
+        border: 2px solid #7fba00;
+        border-radius: 40px;
+        color: #fff;
+        &:hover {
+            color: #7fba00;
+            background-color: #fff;
+        }
+      }
+    }
+}

@@ -1,0 +1,42 @@
+footer {
+  display: flex;
+  color: #484848;
+  max-width: 1520px;
+  padding: 35px 0;
+  margin: 0 auto;
+  @include mobile {
+    flex-wrap: wrap;
+    width: 95%;
+  }
+  li {
+    display: inline-block;
+    padding-right: 5px;
+    border-right: 2px solid #484848;
+  }
+  a {
+    color: #484848;
+    padding-bottom: 3px;
+    &:hover {
+      border-bottom: 1px solid #484848;
+    }
+  }
+  div {
+    width: 50%;
+    @include mobile {
+      width: 100%;
+    }
+  }
+  p {
+    font-weight: 300;
+  }
+  .microsoft {
+    text-align: right;
+    @include mobile {
+      text-align: left;
+      margin-top: 25px;
+    }
+    h3 {
+      font-size: $font-size-4;
+    }
+  }
+}

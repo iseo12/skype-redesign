@@ -1,0 +1,774 @@
+* {
+	box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header {
+	background: url(../img/headerBG.jpg) center center no-repeat fixed;
+	height: 805px;
+	font-family: 'Open Sans', sans-serif;
+	color: #ffffff;
+	font-weight: 300;
+	width: 100%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.top-bar {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.logo {
+	margin-top: 50px;
+	float: left;
+}
+
+header h1, #dlBtn, #devices, header p {
+	text-align: center;
+}
+
+.navbar {
+	font-size: 18px;
+	float: right;
+	margin-top: 7%;
+}
+
+.navbar li {
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.navbar li:nth-child(4) {
+	margin-right: 50px;
+}
+
+.navbar a {
+	color: #bad7f6;
+}
+
+.navbar a:hover {
+	color: #ffffff;
+}
+
+.navbar .sign-in {
+	padding: 15px 45px;
+	color: #7fba00;
+	border: 1px solid #7fba00;
+	border-radius: 30px;
+}
+
+.navbar .sign-in:hover {
+	color: #ffffff;
+	background-color: #7fba00;
+}
+
+#menu {
+	float: right;
+	display: none;
+}
+
+.menu-container {
+	cursor: pointer;
+	position: relative;
+	padding-top: 45px;
+	z-index: 4000;
+	width: 70px;
+	height: 70px;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.menu-container.open {
+	position: fixed;
+}
+
+.icon-bar {
+	display: block;
+	width: 24px;
+	height: 2px;
+	margin: 0 auto 4px;
+	background-color: #fff;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.icon-bar.open:first-child {
+	position: absolute;
+	top: 50px;
+	left: 23px;
+	transform: rotate(45deg);
+	transform-origin: 50%, 50%;
+}
+
+.icon-bar.open:nth-child(2) {
+	opacity: 0;
+}
+
+.icon-bar.open:last-child {
+	position: absolute;
+	top: 50px;
+	left: 23px;
+	transform: rotate(-45deg);
+	transform-origin: 50%, 50%;
+}
+
+#menu .modal {
+	display: none;
+	position: fixed;
+	opacity: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 0;
+	background-color: rgba(246, 60, 60, 0.9);
+	z-index: 2000;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+#menu .modal.open{
+	display: block;
+	opacity: 1;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.modal .navigation{
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	text-align: center;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.modal .navigation li{
+	position: relative;
+	display: block;
+	margin-top: 20px;
+	font-size: 4vw;
+	color: #fff;
+	opacity: 0;
+	top: 20px;
+	-webkit-transition: all 0.3s ease-out 0.5s;
+	-moz-transition: all 0.3s ease-out 0.5s;
+	-o-transition: all 0.3s ease-out 0.5s;
+	transition: all 0.3s ease-out 0.5s;
+}
+
+.modal .navigation li.open{
+	opacity: 1;
+	top: 0;
+}
+
+.modal .navigation a {
+	font-size: 40px;
+	color: #ffffff;
+}
+/*
+.open {
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	-o-transform: scale(0.75);
+	transform: scale(0.75);
+}*/
+
+h1 {
+	font-size: 42px;
+	margin: 0 auto;
+	line-height: 50px;
+}
+
+header h1 {
+	width: 70%;
+	padding-top: 285px;
+}
+
+#dlBtn {
+	margin-top: 80px;
+}
+
+#dlBtn a {
+	padding: 20px 35px;
+	background-color: #7fba00;
+	border-radius: 30px;
+	font-family: 'Myriad pro';
+	font-size: 18px;
+	color: #ffffff;
+	letter-spacing: 1px;
+}
+
+#dlBtn a:hover {
+	color: #7fba00;
+	background-color: #ffffff;
+	border: 1px solid #7fba00;
+}
+
+#devices {
+	margin-top: 115px;
+}
+
+#devices li {
+	display: inline-block;
+	margin-right: 30px;
+}
+
+#devices li:last-child {
+	margin-right: 0;
+}
+
+header p {
+	margin-top: 20px;
+}
+
+#chat {
+	height: 635px;
+}
+
+.msgPhones {
+	display: inline-block;
+	height: 100%;
+	margin-left: 7%;
+	margin-right: 7%;
+}
+
+.everydayChat {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	margin-top: 217px;
+	width: 31%;
+}
+
+.everydayChat h1, .everydayChat p {
+	color: #484848;
+}
+
+.everydayChat h1 {
+	display: inline;
+	padding-top: 0;
+}
+
+.everydayChat p {
+	font-size: 20px;
+	margin-top: 38px;
+	font-weight: 300;
+	line-height: 30px;
+}
+
+.smiley {
+	width: 50px;
+	margin-right: 28px;
+}
+
+#share {
+	background-color: #2ba7de;
+	color: #ffffff;
+	height: 760px;
+	text-align: center;
+	font-weight: 300;
+}
+
+.shareContainer {
+	width: 63%;
+	margin: 0 auto;
+	position: relative;
+	z-index: 100;
+}
+
+.fa-video-camera {
+	margin-top: 50px;
+}
+
+#share h1 {
+	margin-top: 30px;
+}
+
+#share p {
+	font-size: 20px;
+	margin-top: 22px;
+	line-height: 30px;
+}
+
+.videocall {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	top: 109%;
+	z-index: 100;
+}
+
+#phone {
+	position: relative;
+	z-index: 200;
+	background-color: #f2f6f7;
+}
+
+.col1, .col2 {
+	display: inline-block;
+}
+
+.col1 {
+	width: 32%;
+	vertical-align: top;
+	margin-left: 14%;
+	font-weight: 300;
+}
+
+.col1 div {
+	margin-top: 140px;
+}
+
+#phonecallIcon {
+	display: inline-block;
+	width: 48px;
+	padding-top: 10px;
+	position: relative;
+	vertical-align: top;
+	margin-right: 10px;
+}
+
+.col1 h1 {
+	display: inline-block;
+	font-size: 40px;
+	width: 76%;
+	color: #484848;
+}
+
+.col1 p {
+	font-size: 20px;
+	color: #484848;
+	margin-top: 77px;
+	width: 98%;
+	line-height: 30px;
+}
+
+.col1 .callrates {
+	margin-top: 65px;
+}
+
+.callrates a {
+	font-family: 'Myriad pro';
+	font-size: 18px;
+	padding: 18px 42px;
+	color: #2ba7de;
+	border: 2px solid #2ba7de;
+	border-radius: 30px;
+}
+
+.callrates a:hover {
+	color: #ffffff;
+	background-color: #2ba7de;
+}
+
+.col2 {
+	display: inline-block;
+	width: 32%;
+	margin-left: 5%;
+	margin-top: 110px;
+}
+
+#features {
+	text-align: center;
+	width: 65.5%;
+	margin: 0 auto;
+	color: #484848;
+	font-weight: 300;
+}
+
+.featuresHeader {
+	margin-top: 165px;
+	margin-bottom: 100px;
+}
+
+#features h2 {
+	font-size: 22px;
+	margin-top: 18px;
+}
+
+#features article {
+	display: inline-block;
+	width: 32.5%;
+}
+
+article {
+	font-size: 18px;
+}
+
+article img {
+	position: relative;
+	vertical-align: bottom;
+}
+
+article h3 {
+	color: #00b0f0;
+	font-weight: 400;
+	margin-top: 35px;
+}
+
+article p {
+	margin: 0 auto;
+	margin-top: 16px;
+	width: 75%;
+	line-height: 25px;
+}
+
+.firstP {
+	width: 60%;
+}
+
+.row3 {
+	margin-top: 110px;
+}
+
+#moreFeatures {
+	margin-top: 100px;
+	margin-bottom: 115px;
+}
+
+#moreFeatures a {
+	font-family: 'Myriad pro';
+	font-size: 18px;
+	padding: 23px 45px;
+	color: #2ba7de;
+	border: 2px solid #2ba7de;
+	border-radius: 40px;
+}
+
+#moreFeatures a:hover {
+	color: #ffffff;
+	background-color: #2ba7de;
+}
+
+#download {
+	background: url(../img/downloadBG.jpg) center center no-repeat;
+	color: #ffffff;
+	text-align: center;
+	height: 245px;
+}
+
+#download h2 {
+	position: relative;
+	padding-top: 75px;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+#download div {
+	margin-top: 30px;
+}
+
+#download a {
+	display: block;
+	color: #ffffff;
+	font-family: 'Myriad pro';
+	font-size: 18px;
+	letter-spacing: 1px;
+	margin: 0 auto;
+	width: 258px;
+	padding: 25px 0;
+	background-color: #7fba00;
+	border-radius: 40px;
+}
+
+#download a:hover {
+	border: 2px solid #7fba00;
+	color: #7fba00;
+	background-color: #ffffff;
+}
+
+footer {
+	width: 87.8%;
+	margin: 0 auto;
+	color: #484848;
+	padding: 35px 0;
+}
+
+#trademarks {
+	float: left;
+	width: 60%;
+	margin-bottom: 35px;
+}
+
+#trademarks p {
+	display: inline;
+	font-weight: 300;
+	width: 95%;
+	line-height: 20px;
+}
+
+#trademarks ul {
+	display: inline;
+}
+
+#trademarks li {
+	display: inline-block;
+	border-right: 2px solid #484848;
+}
+
+#trademarks a {
+	color: #484848;
+	padding-right: 5px;
+}
+
+#trademarks a:hover {
+	border-bottom: 1px solid #484848;
+}
+
+#microsoft {
+	float: right;
+}
+
+#microsoft h3 {
+	text-align: right;
+}
+
+#microsoft p {
+	margin-top: 5px;
+	font-weight: 300;
+}
+
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+	header h1 {
+		width: 100%;
+	}
+
+	#navbar {
+		margin-top: 9%;
+	}
+
+	#chat {
+		height: 490px;
+	}
+
+	.everydayChat {
+		margin-top: 95px;
+	}
+
+	.shareContainer {
+		width: 70%;
+	}
+
+	.col1 {
+		width: 35%;
+		margin-left: 5%;
+	}
+
+	#features {
+		width: 94%;
+	}
+
+	#trademarks, #trademarks ul a, #microsoft {
+		font-size: 14px;
+	}
+
+	#trademarks ul {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	#chat {
+		height: 420px;
+	}
+
+	.everydayChat {
+		margin-top: 40px;
+	}
+}
+
+@media screen and (max-width: 815px) {
+	#navbar {
+		display: none;
+	}
+
+	#menu {
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width : 768px) {
+	header h1 {
+		width: 95%;
+		font-size: 36px;
+	}
+
+	#logo {
+		margin-top: 25px;
+	}
+
+	.msgPhones {
+		display: none;
+	}
+
+	#chat {
+		text-align: center;
+		height: 400px;
+	}
+
+	.everydayChat {
+		margin-top: 100px;
+		width: 75%;
+	}
+
+	#share {
+		height: 635px;
+	}
+
+	.shareContainer {
+		width: 84%;
+	}
+
+	.videocall {
+		top: 109%;
+		width: 110%;
+	}
+
+	#phone {
+		display: inline-block;
+	}
+
+	.col1 {
+		width: 64%;
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+	}
+
+	.col1 p, .col1 div {
+		margin-top: 60px;
+	}
+
+	.col2 img {
+		display: none;
+	}
+
+	.featuresHeader {
+		margin: 60px 0;
+	}
+
+	h1 {
+		font-size: 36px;
+	}
+
+	#features {
+		width: 95%;
+	}
+
+	#features h2 {
+		font-size: 20px;
+	}
+
+	#features article {
+		width: 46%;
+		margin-top: 40px;
+	}
+
+	article {
+		font-size: 16px;
+	}
+
+	.row3 {
+		display: inline;
+	}
+
+	#moreFeatures {
+		margin-bottom: 85px;
+	}
+
+	#download h2 {
+		font-size: 16px;
+	}
+
+	#trademarks {
+		float: none;
+		width: 95%;
+		margin-bottom: 25px;
+	}
+
+	#trademarks ul {
+		display: block;
+	}
+
+	#microsoft {
+		float: none;
+	}
+
+	#microsoft h3 {
+		text-align: left;
+	}
+
+	footer {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 595px) {
+	header h1, h1 {
+		font-size: 32px;
+	}
+}
+
+@media screen and (max-width: 509px) {
+	.col1 {
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 406px) {
+	header {
+		height: 610px;
+	}
+
+	header h1 {
+		padding-top: 150px;
+		font-size: 28px;
+	}
+
+	#dlBtn {
+		margin-top: 70px;
+	}
+
+	#devices {
+		margin-top: 70px;
+	}
+
+	.everydayChat {
+		margin-top: 60px;
+	}
+
+	#trademarks {
+		font-size: 14px;
+	}
+
+	#trademarks ul {
+		line-height: 20px;
+	}
+
+	#microsoft {
+		font-size: 14px;
+	}
+}
